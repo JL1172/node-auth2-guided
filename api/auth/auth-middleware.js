@@ -10,7 +10,7 @@ const restricted = (req, res, next) => {
         next({status : 401, message : `token ba: ${err.message}`}) //too much info for prod
       } else {
         req.decodedJwt = decodedToken,
-        console.log(req.decodedJwt)
+
         next();
       }
     })
